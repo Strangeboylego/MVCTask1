@@ -1,0 +1,7 @@
+import ua.com.vakoms.model.Product
+rule "Offer for Diamond"
+	when
+		productObject: Product(type=="diamond")
+	then
+		productObject.setDiscount(15);
+	end
